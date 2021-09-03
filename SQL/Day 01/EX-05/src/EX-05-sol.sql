@@ -90,7 +90,7 @@ SELECT
         '*'
       )
     )
-  ) END 
+  ) END MASKED_FULL_NAME
 FROM 
   (
     SELECT 
