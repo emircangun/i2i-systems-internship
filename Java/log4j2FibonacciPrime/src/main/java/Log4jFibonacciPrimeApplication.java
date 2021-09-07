@@ -1,6 +1,6 @@
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-
+import java.lang.Math;
 import java.util.Scanner;
 
 public class Log4jFibonacciPrimeApplication {
@@ -44,21 +44,36 @@ public class Log4jFibonacciPrimeApplication {
         return true;
     }
 
+//    public boolean isFibonacci_(int number)
+//    {
+//        if (number < 1)
+//            return false;
+//
+//        int left = 1;
+//        int right = 1;
+//        while (right < number)
+//        {
+//            int tmp = left;
+//            left = right;
+//            right = tmp + right;
+//        }
+//
+//        return (right == number);
+//    }
+
     public boolean isFibonacci(int number)
     {
         if (number < 1)
             return false;
 
-        int left = 1;
-        int right = 1;
-        while (right < number)
-        {
-            int tmp = left;
-            left = right;
-            right = tmp + right;
-        }
+        return isPerfectSqr(5 * number * number + 4) ||
+                isPerfectSqr(5 * number * number - 4);
+    }
 
-        return (right == number);
+    private boolean isPerfectSqr(double number)
+    {
+        double s = Math.sqrt(number);
+        return ((s - Math.floor(s)) == 0);
     }
 
 }
