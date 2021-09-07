@@ -18,12 +18,13 @@ public class Log4jFibonacciPrimeApplication {
         boolean isPrimeAndFibonacci = app.isFibonacci(number) && app.isPrime(number);
         System.out.println(isPrimeAndFibonacci);
 
-        for (int i = 2; i < 500; ++i)
-        {
-            boolean isPrimeAndFibonacci_debug = app.isFibonacci(i) && app.isPrime(i);
-            System.out.println(isPrimeAndFibonacci_debug);
-            logger.info("NUMBER " + i + " " + isPrimeAndFibonacci_debug);
-        }
+        // for testing purpose only
+//        for (int i = 2; i < 500; ++i)
+//        {
+//            boolean isPrimeAndFibonacci_debug = app.isFibonacci(i) && app.isPrime(i);
+//            System.out.println(isPrimeAndFibonacci_debug);
+//            logger.info("NUMBER " + i + " " + isPrimeAndFibonacci_debug);
+//        }
     }
 
     public boolean isPrime(int number)
